@@ -19,6 +19,7 @@ module.exports = function (app) {
     app.get('/api/workouts', (req, res) => {
         db.Workout.find()
             .then(data => {
+                console.log(data);
                 res.send(data);
             })
             .catch(err => {
