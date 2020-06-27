@@ -1,12 +1,12 @@
 # workout-tracker
 
-![enter](https://img.shields.io/badge/badge-none-brightgreen)
+![enter](https://github.com/kaito47/workout_tracker/blob/master/public/img/enter.png)
 
 ## Description 
 
 This app allows the user to input either a cardio or resistance workout, save it to MongoDB, complete or continue the workout, then view the stats. .
 
-![stats](https://img.shields.io/badge/badge-none-brightgreen)
+![stats](https://github.com/kaito47/workout_tracker/blob/master/public/img/stats.png)
 
 ## Table of Contents
 * [Installation](#installation)
