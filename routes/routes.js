@@ -28,24 +28,34 @@ module.exports = function (app) {
 
     app.post("/api/workouts", (req, res) => {
         console.log(req.body);
-        // db.Workout.create(body)
-        //     .then(data => {
-        //         res.json(data);
-        //     })
-        //     .catch(err => {
-        //         res.status(400).json(err);
-        //     });
+        db.Workout.create(body)
+            .then(data => {
+                res.json(data);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
     });
 
-    // router.post("/api/transaction/bulk", ({ body }, res) => {
-    //   Transaction.insertMany(body)
-    //     .then(dbTransaction => {
-    //       res.json(dbTransaction);
-    //     })
-    //     .catch(err => {
-    //       res.status(400).json(err);
-    //     });
-    // });
+    app.put("/api/workouts/:id", ({ body }, res) => {
+        db.Workout.insertMany(body)
+            .then(data => {
+                res.json(data);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
+    });
+
+    app.get('/api/workouts/range', (req, res) => {
+        db.Workout.find()
+            .then(data => {
+                res.send(data);
+            })
+            .catch(err => {
+                res.send(err);
+            });
+    });
 
 
 };
